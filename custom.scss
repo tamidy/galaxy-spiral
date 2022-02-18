@@ -1,0 +1,44 @@
+@import "./bootstrap/scss/bootstrap";
+
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 5,
+  );
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null);
+
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "purple-500": $purple-500,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray-300":   $gray-300,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800,
+);
+
+#homepage {
+  background-color: $purple-500;
+}
+
+#contactform {
+  background-color: $gray-300;
+}
+
+/*
+SASS Compilation
+https://stackoverflow.com/questions/60602125/how-to-import-scss-files-into-html-files
+*/
